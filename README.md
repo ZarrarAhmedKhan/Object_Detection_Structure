@@ -12,7 +12,7 @@ How to train the Object_detection tensorflow Api (tf1==1.15)?
 
 2. Change path in the file "run_train" and run it.
 
-## object detection folder (Google Colab)
+# Copy Object Detection folder (Google Colab)
 
 First, outside this "Object_Detection_Structure" folder, clone tensorflow/models
 
@@ -21,29 +21,41 @@ First, outside this "Object_Detection_Structure" folder, clone tensorflow/models
 I am using tensorflow 1, so
 
 !pip3 uninstall -y tensorflow==2.6.0
+
 !pip3 install tensorflow-gpu==1.15
 
 install some libraries
 
 !sudo apt-get install protobuf-compiler python-pil python-lxml python-tk
+
 !pip3 install --user Cython
+
 !pip3 install --user contextlib2
+
 !pip3 install --user jupyter
+
 !pip3 install --user matplotlib
+
 !sudo -H pip3 install numpy==1.17.4
 
-### go inside models/research directory
+## Go inside models/research directory
 
 %cd '/models/research'
+
 !protoc object_detection/protos/*.proto --python_out=.
+
 !cp object_detection/packages/tf1/setup.py .
+
 !export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 
 !python3 setup.py build
+
 !python3 setup.py install
 
 %cd slim
+
 !python3 setup.py build
+
 !python3 setup.py install
 
 After that, copy "object_detection" folder inside "research" folder to "Object_Detection_Structure" folder
