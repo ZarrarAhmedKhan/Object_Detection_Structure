@@ -66,6 +66,8 @@ change the paths as mentioned at the top of the readme and run this file "run_tr
 
 After training completed, you have to evaluate the training results.
 
+## Evaluation of training
+
 So, run this file "run_eval". 
 
 on Google Colab, first you give permission to bash file , like this
@@ -75,3 +77,17 @@ on Google Colab, first you give permission to bash file , like this
 !sed -i -e 's/\r$//' run_eval
 
 !./run_eval
+
+see good our model is trained, some evaluation measure concepts https://www.jeremyjordan.me/evaluating-a-machine-learning-model/
+
+## Export the Frozen_graph
+
+Set the path in "run_export" bash file. pipeline_config should use "pipeline.config" which is present in "train" folder.
+
+!chmod +x run_export
+
+!sed -i -e 's/\r$//' run_export
+
+!./run_export
+
+Now you get the frozen_graph.pb thats it. you can now infernce your model on any image or video.
