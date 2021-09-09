@@ -91,3 +91,11 @@ Set the path in "run_export" bash file. pipeline_config should use "pipeline.con
 !./run_export
 
 Now you get the frozen_graph.pb thats it. you can now infernce your model on any image or video.
+
+## Inference on Image 
+
+set paths in the "Image_Detection_through_frozenfile" file.
+
+!python3 Image_Detection_through_frozenfile.py -i input.jpg -o output.jpg
+
+Similarly for the video...
