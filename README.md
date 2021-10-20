@@ -4,12 +4,12 @@ Prerequisites files
 
 Go inside the Data folder:
 
-Generate generate_labelmap_from_csv.py
+### Generate generate_labelmap_from_csv.py
 
 *python3 generate_labelmap_from_csv.py -c path to csv*
 > It will generate the label_map.pbtxt
 
-1. Label_map.pbtxt (placed inside the input folder)
+> Label_map.pbtxt (placed inside the input folder)
 
 2. tf.record (placed inside the input folder)
 
