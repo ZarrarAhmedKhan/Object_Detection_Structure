@@ -14,7 +14,7 @@ Go inside the Data folder:
 ### generate_tfrecord 
 *python3 generate_tfrecord.py --csv_input=train.csv  --output_path=../inputs/train.record --label_map=inputs/label_map.pbtxt*
 >It will generate .tfrecord file
->tf.record (placed inside the input folder)
+>(placed inside the input folder)
 
 How to train the Object_detection tensorflow Api (tf1==1.15)?
 
