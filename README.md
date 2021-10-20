@@ -4,14 +4,17 @@ Prerequisites files
 
 Go inside the Data folder:
 
-### Generate generate_labelmap_from_csv.py
+### generate_labelmap_from_csv
 
 *python3 generate_labelmap_from_csv.py -c path to csv*
 > It will generate the label_map.pbtxt
 
 > Label_map.pbtxt (placed inside the input folder)
 
-2. tf.record (placed inside the input folder)
+### generate_tfrecord 
+*python3 generate_tfrecord.py --csv_input=train.csv  --output_path=../inputs/train.record --label_map=inputs/label_map.pbtxt* 
+>It will generate .tfrecord file
+>tf.record (placed inside the input folder)
 
 How to train the Object_detection tensorflow Api (tf1==1.15)?
 
