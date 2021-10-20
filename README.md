@@ -23,6 +23,8 @@ How to train the Object_detection tensorflow Api (tf1==1.15)?
 2. Change path in the file "run_train" and run it.
 
 ## Additional work (not necessary)
+
+### change_xml_filename
 >If xml_filenme specified inside xml file is not equal to xml filename
 
 *like this: xml file name = 'image2.xml'*
@@ -35,6 +37,13 @@ How to train the Object_detection tensorflow Api (tf1==1.15)?
   
 > change_xml_filename.py
 
+### Check number of images files not present in xml folder
+
+>Check and delete the images files which are not present in the xml folder.
+
+*set path inside the equal_xmls_images.py file*
+
+>python3 equal_xmls_images.py 
 
 # Copy Object Detection folder (Google Colab)
 
