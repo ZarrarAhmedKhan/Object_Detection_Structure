@@ -16,22 +16,25 @@ Go inside the Data folder:
 >It will generate .tfrecord file
 >(placed inside the input folder)
 
-## Additional work (not necessary)
->If xml_filenme specified inside xml file is not equal to xml filename
-
-like this: xml file name = 'image2.xml'
-
-But inside it like this:
-
-*filename>image.jpg</filename>*
-  
-> Use this script change_xml_filename.py
-
 How to train the Object_detection tensorflow Api (tf1==1.15)?
 
 1. Placed the using model config in the config folder and change different paths inside it.
 
 2. Change path in the file "run_train" and run it.
+
+## Additional work (not necessary)
+>If xml_filenme specified inside xml file is not equal to xml filename
+
+*like this: xml file name = 'image2.xml'*
+
+*But inside it like this:*
+
+*filename>image.jpg</filename>*
+
+*use this script*
+  
+> change_xml_filename.py
+
 
 # Copy Object Detection folder (Google Colab)
 
