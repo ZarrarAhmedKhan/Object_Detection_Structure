@@ -45,6 +45,12 @@ How to train the Object_detection tensorflow Api (tf1==1.15)?
 
 >python3 equal_xmls_images.py 
 
+### seperate_xmls_imgs from one folder
+
+*If we have images and annotations in single folder then seperate images and xmls from this script*
+
+>python3 seperate_xmls_imgs.py
+
 # Copy Object Detection folder (Google Colab)
 
 First, outside this "Object_Detection_Structure" folder, clone tensorflow/models
