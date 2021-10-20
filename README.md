@@ -18,9 +18,13 @@ Go inside the Data folder:
 
 ## Additional work (not necessary)
 *If xml_filenme specified inside xml file is not equal to xml filename*
+
 *like this 
+
 *<annotation>*
+  
 *<folder/>*
+  
 *<filename>mtn-dew-commrcial_mp4-1_jpg.rf.c0138c8a518b9a1ab0dc1400ac1a85aa.jpg</filename>*
   
 > Use this script change_xml_filename.py
