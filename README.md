@@ -12,9 +12,9 @@ Go inside the Data folder:
 > Label_map.pbtxt (placed inside the input folder)
 
 ### generate_tfrecord 
-*python3 generate_tfrecord.py --csv_input=train.csv  --output_path=../inputs/train.record --label_map=inputs/label_map.pbtxt*
->It will generate .tfrecord file
->(placed inside the input folder)
+>python3 generate_tfrecord.py --csv_input=train.csv  --output_path=../inputs/train.record --label_map=inputs/label_map.pbtxt
+*It will generate .tfrecord file*
+*(placed inside the input folder)*
 
 How to train the Object_detection tensorflow Api (tf1==1.15)?
 
