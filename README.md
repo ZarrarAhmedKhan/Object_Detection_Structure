@@ -6,10 +6,11 @@ Go inside the Data folder:
 
 ### generate_labelmap_from_csv
 
-*python3 generate_labelmap_from_csv.py -c path to csv*
-> It will generate the label_map.pbtxt
+>python3 generate_labelmap_from_csv.py -c path to csv
 
-> Label_map.pbtxt (placed inside the input folder)
+*It will generate the label_map.pbtxt*
+
+*Label_map.pbtxt (placed inside the input folder)*
 
 ### generate_tfrecord 
 >python3 generate_tfrecord.py --csv_input=train.csv  --output_path=../inputs/train.record --label_map=inputs/label_map.pbtxt
@@ -17,9 +18,9 @@ Go inside the Data folder:
 *It will generate .tfrecord file*
 *(placed inside the input folder)*
 
-How to train the Object_detection tensorflow Api (tf1==1.15)?
+#### How to train the Object_detection tensorflow Api (tf1==1.15)?
 
-1. Placed the using model config in the config folder and change different paths inside it.
+1. Placed the given model config in the config folder and change different paths inside it.
 
 2. Change path in the file "run_train" and run it.
 
@@ -36,7 +37,7 @@ How to train the Object_detection tensorflow Api (tf1==1.15)?
 
 *use this script*
   
-> change_xml_filename.py
+> python3 change_xml_filename.py
 
 ### Check number of images files not present in xml folder
 
