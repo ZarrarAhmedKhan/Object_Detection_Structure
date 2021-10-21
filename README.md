@@ -111,7 +111,7 @@ After training completed, you have to evaluate the training results.
 
 So, run this file "run_eval". 
 
-on Google Colab, first you give permission to bash file , like this
+On Google Colab, first you give permission to bash file , like this
 
 !chmod +x run_eval
 
@@ -119,7 +119,7 @@ on Google Colab, first you give permission to bash file , like this
 
 !./run_eval
 
-see good our model is trained, some evaluation measure concepts https://www.jeremyjordan.me/evaluating-a-machine-learning-model/
+See howgood our model is trained, some evaluation measure concepts https://www.jeremyjordan.me/evaluating-a-machine-learning-model/
 
 ## Export the Frozen_graph
 
