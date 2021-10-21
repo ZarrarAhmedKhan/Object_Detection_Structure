@@ -13,6 +13,7 @@ Go inside the Data folder:
 
 ### generate_tfrecord 
 >python3 generate_tfrecord.py --csv_input=train.csv  --output_path=../inputs/train.record --label_map=inputs/label_map.pbtxt
+
 *It will generate .tfrecord file*
 *(placed inside the input folder)*
 
