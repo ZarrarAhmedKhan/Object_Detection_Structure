@@ -57,53 +57,56 @@ Go inside the Data folder:
 
 First, outside this "Object_Detection_Structure" folder, clone tensorflow/models
 
-!git clone https://github.com/tensorflow/models.git
+>!git clone https://github.com/tensorflow/models.git
 
 I am using tensorflow 1, so
 
-!pip3 uninstall -y tensorflow==2.6.0
+>!pip3 uninstall -y tensorflow==2.6.0
 
-!pip3 install tensorflow-gpu==1.15
+>!pip3 install tensorflow-gpu==1.15
 
 install some libraries
 
-!sudo apt-get install protobuf-compiler python-pil python-lxml python-tk
+>!sudo apt-get install protobuf-compiler python-pil python-lxml python-tk
 
-!pip3 install --user Cython
+>!pip3 install --user Cython
 
-!pip3 install --user contextlib2
+>!pip3 install --user contextlib2
 
-!pip3 install --user jupyter
+>!pip3 install --user jupyter
 
-!pip3 install --user matplotlib
+>!pip3 install --user matplotlib
 
-!sudo -H pip3 install numpy==1.17.4
+>!sudo -H pip3 install numpy==1.17.4
 
 ## Go inside models/research directory
 
-%cd '/models/research'
+>%cd '/models/research'
 
-!protoc object_detection/protos/*.proto --python_out=.
+>!protoc object_detection/protos/*.proto --python_out=.
 
-!cp object_detection/packages/tf1/setup.py .
+>!cp object_detection/packages/tf1/setup.py .
 
-!export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
+>!export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 
-!python3 setup.py build
+>!python3 setup.py build
 
-!python3 setup.py install
+>!python3 setup.py install
 
-%cd slim
+>%cd slim
 
-!python3 setup.py build
+>!python3 setup.py build
 
-!python3 setup.py install
+>!python3 setup.py install
 
-After that, copy "object_detection" folder inside "research" folder to "Object_Detection_Structure" folder
+make softlink of object_detection to our repository directory(where our directories and executable file lies). 
+Use the following command to make softlink
+
+> ln -s /home/zeb/models/research/object_detection /home/zeb/Object_Detection
 
 change the paths as mentioned at the top of the readme and run this file "run_train" to start training
 
-!bash run_train
+>!bash run_train
 
 After training completed, you have to evaluate the training results.
 
@@ -113,11 +116,11 @@ So, run this file "run_eval".
 
 On Google Colab, first you give permission to bash file , like this
 
-!chmod +x run_eval
+>!chmod +x run_eval
 
-!sed -i -e 's/\r$//' run_eval
+>!sed -i -e 's/\r$//' run_eval
 
-!./run_eval
+>!./run_eval
 
 See howgood our model is trained, some evaluation measure concepts https://www.jeremyjordan.me/evaluating-a-machine-learning-model/
 
@@ -125,11 +128,11 @@ See howgood our model is trained, some evaluation measure concepts https://www.j
 
 Set the path in "run_export" bash file. pipeline_config should use "pipeline.config" which is present in "train" folder.
 
-!chmod +x run_export
+>!chmod +x run_export
 
-!sed -i -e 's/\r$//' run_export
+>!sed -i -e 's/\r$//' run_export
 
-!./run_export
+>!./run_export
 
 Now you get the frozen_graph.pb thats it. you can now infernce your model on any image or video.
 
@@ -137,6 +140,6 @@ Now you get the frozen_graph.pb thats it. you can now infernce your model on any
 
 set paths in the "Image_Detection_through_frozenfile" file.
 
-!python3 Image_Detection_through_frozenfile.py -i input.jpg -o output.jpg
+>!python3 Image_Detection_through_frozenfile.py -i input.jpg -o output.jpg
 
 Similarly for the video...
